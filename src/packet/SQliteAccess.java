@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class g {
+public class SQliteAccess {
     private Connection connect = null;
     private Statement statement = null;
     public PreparedStatement preparedStatement = null;

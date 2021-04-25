@@ -9,8 +9,9 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-   g s = new g();
-   s.readDataBase();
+        Userpanel panel = new Userpanel();
+
+
 
 
     }
