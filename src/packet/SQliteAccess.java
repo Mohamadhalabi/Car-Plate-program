@@ -30,13 +30,13 @@ public class SQliteAccess {
             preparedStatement = connect.prepareStatement("insert into  base values (?,?,?,?)");
             // "myuser, webpage, datum, summary, COMMENTS from feedback.comments");
             // Parameters start with 1
-            preparedStatement.setInt(1, 3);
+            preparedStatement.setInt(1, 4);
             preparedStatement.setString(2, "Yusuf Can Sert");
             preparedStatement.setString(3, "Mercedes");
             preparedStatement.setInt(4,123);
             preparedStatement.executeUpdate();
 
-            preparedStatement = connect.prepareStatement("SELECT ID,Full_Name,Car_Model,Car_Plate from base");
+            preparedStatement = connect.prepareStatement("SELECT * from base");
             resultSet = preparedStatement.executeQuery();
             writeResultSet(resultSet);
 
@@ -49,7 +49,7 @@ public class SQliteAccess {
         } catch (Exception e) {
             throw e;
         } finally {
-            close();
+
         }
 
     }
@@ -85,22 +85,4 @@ public class SQliteAccess {
         }
     }
 
-    // You need to close the resultSet
-    private void close() {
-        try {
-            if (resultSet != null) {
-                resultSet.close();
-            }
-
-            if (statement != null) {
-                statement.close();
-            }
-
-            if (connect != null) {
-                connect.close();
-            }
-        } catch (Exception e) {
-
-        }
-    }
 }
