@@ -8,8 +8,9 @@ import java.sql.Statement;
 public class Main {
 
     public static void main(String[] args) throws Exception {
+        SQliteAccess sq = new SQliteAccess();
+        sq.readDataBase();
 
-        Userpanel panel = new Userpanel();
 
 
 
