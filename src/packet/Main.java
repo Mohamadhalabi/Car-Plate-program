@@ -1,18 +1,16 @@
-package packet;
-
-import javax.sql.rowset.JdbcRowSet;
-import javax.sql.rowset.Joinable;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import javax.swing.*;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
-      Userpanel s = new Userpanel();
+    public static void main(String[] args) {
 
 
-
-
+        JFrame frame = new JFrame("LoginPanel");
+        frame.setContentPane(new LoginPanel().panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
 
     }
+
 }
