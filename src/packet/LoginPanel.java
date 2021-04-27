@@ -19,7 +19,8 @@ public class LoginPanel {
 
                 boolean accountFound = false; // Mark when an account is logged in
                 String usernameInput = UsernameField.getText(); // Get username input
-                char[] password = passwordField.getPassword(); // Get password input
+                String  password = PasswordField.getText(); // Get password input
+
 
                 try {
                     // Read from registration.txt file
